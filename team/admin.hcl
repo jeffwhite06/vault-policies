@@ -1,5 +1,5 @@
 # Provides administrators access to administrate the namespace and manage secrets
-# at the admin namespace.
+# at the team namespace.  Administrators cannot read secrets at this level.
 
 # Allow managing leases
 path "sys/leases/*"
@@ -45,7 +45,7 @@ path "sys/policies/acl/*"
 # Manage KV secrets engine
 path "secret/*"
 {
-  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+  capabilities = ["create", "update", "delete", "list", "sudo"]
 }
 
 # Manage secret engines

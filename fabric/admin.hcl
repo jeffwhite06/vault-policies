@@ -1,5 +1,5 @@
 # Provides administrators access to administrate the namespace and manage secrets
-# at the admin namespace.
+# at the fabric namespace.
 
 # Allow managing leases
 path "sys/leases/*"

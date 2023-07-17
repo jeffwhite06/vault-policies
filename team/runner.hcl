@@ -1,11 +1,4 @@
-# Provides administrators access to administrate the namespace and manage secrets
-# at the admin namespace.
-
-# Allow managing leases
-path "sys/leases/*"
-{
-  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
-}
+# Provides the Github Runner access to manage the team namespace.
 
 # Manage identities
 path "identity/*" {
@@ -58,15 +51,4 @@ path "sys/mounts/*"
 path "sys/mounts"
 {
   capabilities = ["read"]
-}
-
-# Manage namespaces
-path "sys/namespaces/*" {
-  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
-}
-
-# Read health checks
-path "sys/health"
-{
-  capabilities = ["read", "sudo"]
 }
