@@ -18,6 +18,7 @@ path "secret/qa/*" {
   capabilities = ["read"]
 }
 
+# if SOX is enabled, disable access to these secrets.
 path "secret/stage/*" {
   capabilities = ["read"]
 }

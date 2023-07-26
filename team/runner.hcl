@@ -23,28 +23,22 @@ path "sys/auth"
   capabilities = ["read"]
 }
 
-# List existing policies
-path "sys/policies/acl"
-{
-  capabilities = ["read","list"]
-}
-
-# Create and manage ACL policies
-path "sys/policies/acl/*"
-{
-  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
-}
-
-# Manage KV secrets engine
+# Manage KV secrets engines
 path "secret/*"
 {
-  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+  capabilities = ["create", "update", "delete", "list", "sudo"]
+}
+
+# Read KV secrets for environment
+path "secret/${environment}/*"
+{
+  capabilities = ["read"]]
 }
 
 # Manage secret engines
 path "sys/mounts/*"
 {
-  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+  capabilities = ["create", "update", "delete", "list", "sudo"]
 }
 
 # List existing secret engines.
